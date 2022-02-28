@@ -1,0 +1,12 @@
+/* @import-normalize; */
+@import 'loginComponent.css';
+@import 'appbarComponent.css';
+@import 'dashboardComponent.css';
+
+
+body {
+  margin: 0;
+  font-family: "Arial";
+  font-size: large;
+}
+
