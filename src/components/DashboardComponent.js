@@ -8,7 +8,7 @@ import AppBarComponent from './AppBarComponent'
 import SideBarComponent from './SideBarComponent'
 import PanelComponent from './PanelComponent'
 
-export default function () {
+export default function dashboard() {
   return (
     <>
         <AppBarComponent />
