@@ -26,7 +26,7 @@ export default function LoginComponent() {
                     }}>Login
                     </button>
 
-                    <a href='#'>Don't have an account? Create one!</a>
+                    <a href='/'>Don't have an account? Create one!</a>
                 </div>
             </div>
             <div className="info-column">
