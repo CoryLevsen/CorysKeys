@@ -1,7 +1,7 @@
 .info-image {
   width: 100%;
   margin: 0 auto;
-  margin-top: 100px;
+  height: 100vh;
 }
 
 .login-page-container {
@@ -41,7 +41,6 @@
   }
 
   .info-column {
-
     width: 50%;
   }
 
@@ -81,4 +80,13 @@
     float: right;
     border-style: none;
     background-color: #67a6e0;
+  }
+
+  h1 {
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .card h2, .card h3, .card a {
+    text-align: center;
   }

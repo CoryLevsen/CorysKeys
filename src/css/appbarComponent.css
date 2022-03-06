@@ -1,5 +1,7 @@
-.appBar-style{
+.appBar-style {
+    align-items: center;
+}
 
-    z-index: 100 !important;
-
+span {
+    padding-left: 1rem;
 }

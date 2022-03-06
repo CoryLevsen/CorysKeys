@@ -1,17 +1,15 @@
 import React from 'react';
 
 import './css/app.css';
+
 import LoginComponent from './components/LoginComponent';
-import DashboardComponent from './components/DashboardComponent';
 
 function App() {
   return (
     <>
-      {/* <LoginComponent /> */}
-      <DashboardComponent />
-      </>
+      <LoginComponent />
+    </>
   )
-
 }
 
 export default App;

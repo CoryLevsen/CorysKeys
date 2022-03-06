@@ -1,54 +1,39 @@
 /* Override the bootstrap Nav Link styles for the sidebar links */
-.nav-link
-{
+.nav-link {
     color: #777 !important;
     text-transform: uppercase !important;
+    margin: 0 10px;
 }
 
-.nav-link:hover
-{
+.nav-link:hover {
     background-color: rgb(216, 216, 216);
     color: black !important;
 }
 
-/* Override the bootstrap Card for the profile cards */
-.card {
-    width: 95% !important;
-    max-width: 95% !important;
-    padding: 0 !important;
-    border-radius: 15px !important;
-    margin-top: 15px !important;
+.nav-bar {
+    margin-right: 1rem;
 }
 
 .sidebar {
-    /* margin-top: 55px; */
-    position: relative;
-    top: 0px;
-    bottom: -55px;
-    left: 0;
     min-height: 100vh !important;
-    padding: 5px 12px 0 0;
+    padding: 5px 0 0 0;
     box-shadow: inset -1px 0 0 rgba(184, 184, 184, 0.6);
 }
 
 #sidebar-wrapper{
     min-height: 100vh !important;
-    /* width: 100vw;
-    margin-left: -1rem; */
     -webkit-transition: margin .25s ease-out;
     -moz-transition: margin .25s ease-out;
     -o-transition: margin .25s ease-out;
     transition: margin .25s ease-out;
-    padding-right: 0px !important;
+    padding: 0;
 }
 
 #sidebar-wrapper .sidebar-heading {
-    /* padding: 0.875rem 1.25rem; */
     font-size: 1.2rem;
 }
 
 #page-content-wrapper {
     padding-top: 10px;
     background-color: rgb(230, 230, 230);
-
 }

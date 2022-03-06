@@ -2,6 +2,8 @@
 @import 'loginComponent.css';
 @import 'appbarComponent.css';
 @import 'dashboardComponent.css';
+@import 'panelComponent.css';
+@import 'error404Component.css';
 
 
 body {

@@ -1,5 +1,5 @@
-.card {
-    width: 95% !important;
-    max-width: 95% !important;
-    padding: 0 !important;;
+.panel-container h2 {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    padding: 1rem;
 }
