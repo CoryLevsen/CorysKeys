@@ -3,3 +3,8 @@
     font-size: 1.25rem;
     padding: 1rem;
 }
+
+.product-panel {
+    background-color: rgb(216, 216, 216);
+    height: calc(100vh - 84px);
+}

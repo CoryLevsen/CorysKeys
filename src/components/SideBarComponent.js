@@ -1,5 +1,10 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
+
+import {signOut} from 'firebase/auth'
+import {auth} from './../libs/firebase'
+
 // routing
 import {useNavigate} from "react-router-dom";
 
@@ -24,6 +29,8 @@ export default function SideBarComponent() {
         </Nav.Item>
         <Nav.Item>
             <Nav.Link href="/products">PRODUCTS</Nav.Link>
+            <Nav.Link as={Link} to="/dashboard" className='allProducts' >VIEW ALL PRODUCTS</Nav.Link>
+            <Nav.Link as={Link} to='add' className='allProducts'>ADD NEW PRODUCTS</Nav.Link>
         </Nav.Item>
         <Nav.Item>
             <Nav.Link href="/orders">ORDERS</Nav.Link>
@@ -42,6 +49,7 @@ export default function SideBarComponent() {
         </Nav.Item>
         <Nav.Item>
             <Nav.Link onClick={() => {
+                signOut(auth)
                 navigate("/login");
             }}>Sign Out
             </Nav.Link>

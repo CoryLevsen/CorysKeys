@@ -14,6 +14,8 @@ import Error404Component from "./components/Error404Component";
 
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AllProductsPanel from "./components/AllProducts";
+import AddProductsPanel from "./components/AddProducts";
 
 const rootElement = document.getElementById("root");
 render(
@@ -21,7 +23,10 @@ render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="login" element={<LoginComponent />} />
-      <Route path="dashboard" element={<DashboardComponent />} />
+      <Route path="dashboard" element={<DashboardComponent />} >
+        <Route index element={<AllProductsPanel title="All Products"/>} />
+        <Route path="add" element={<AddProductsPanel title="Add Products"/>} />
+      </Route>
       <Route path="*" element={<Error404Component />} />
     </Routes>
   </BrowserRouter>,
