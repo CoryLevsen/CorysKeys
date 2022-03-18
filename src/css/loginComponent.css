@@ -90,3 +90,7 @@
   .card h2, .card h3, .card a {
     text-align: center;
   }
+
+  .Toastify__toast {
+    /* style the toast messages */
+  }

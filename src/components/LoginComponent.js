@@ -14,9 +14,18 @@ export default function LoginComponent() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const notify = (error) => toast.error(error.code,{
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        // icon: custom react icon
+    });
 
     return (
-        
         <div className="login-page-container">
             <div className="form-column">
                 <h1>Cory's Keys</h1>
@@ -26,21 +35,20 @@ export default function LoginComponent() {
                     <h3><i>Please sign in</i></h3>
                     <div className="form-group">
                         <label htmlFor="email">Email Address</label>
-                        <input required type="email" name="email" id="email" />
+                        <input required type="text" name="email" id="email" onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
-                        <input required type="password" name="password" id="password" />
+                        <input required type="text" name="password" id="password" onChange={(e) => setPassword(e.target.value)}  />
                     </div>
                     <button type="button" className="button-login-style" onClick={() => {
                         signInWithEmailAndPassword(auth, email, password)
                         .then(userCredential=>{
-                            //navigate("/dashboard");
-
-                            console.log(userCredential)
+                            navigate("/dashboard");
+                            //console.log(userCredential)
                         })
                         .catch(error=>{
-                            console.log(error)
+                            notify(error)
                         })
                     }}>Login
                     </button>
