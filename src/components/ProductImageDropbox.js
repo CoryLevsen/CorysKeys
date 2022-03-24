@@ -21,10 +21,13 @@ function workingThing(){
 }
 
     return( 
+    <>
         <ProductImageDropBoxStyles {...getRootProps({isFocused, isDragAccept, isDragReject})}>
             <input {...getInputProps()} onChange={workingThing} />
             <p>Product Image Upload</p>
         </ProductImageDropBoxStyles>
+    </>
+        
     )
 }
 
