@@ -3,14 +3,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 // routing
-import {useNavigate} from "react-router-dom";
+
 // Icons
 import { MdOutlineMail, MdSettings,  } from 'react-icons/md'
 import { IoMdNotifications } from 'react-icons/io'
 import { CgProfile } from 'react-icons/cg'
 
 export default function AppBarComponent() {
-  let navigate = useNavigate();
+  
   return (
     <div className="appBar-style">
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
