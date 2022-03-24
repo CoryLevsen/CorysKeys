@@ -1,13 +1,12 @@
 /* Override the bootstrap Nav Link styles for the sidebar links */
 .nav-link {
     color: #777 !important;
-    text-transform: uppercase !important;
     margin: 0 10px;
 }
 
 .nav-link:hover {
-    background-color: rgb(216, 216, 216);
-    color: black !important;
+    background-color: rgb(230, 230, 230);
+    color: black;
 }
 
 .nav-bar {
@@ -15,17 +14,14 @@
 }
 
 .sidebar {
-    min-height: 100vh !important;
+    background-color: rgb(216, 216, 216);
+    min-height: 100vh;
     padding: 5px 0 0 0;
     box-shadow: inset -1px 0 0 rgba(184, 184, 184, 0.6);
 }
 
 #sidebar-wrapper{
-    min-height: 100vh !important;
-    -webkit-transition: margin .25s ease-out;
-    -moz-transition: margin .25s ease-out;
-    -o-transition: margin .25s ease-out;
-    transition: margin .25s ease-out;
+    min-height: 100vh;
     padding: 0;
 }
 
@@ -36,4 +32,9 @@
 #page-content-wrapper {
     padding-top: 10px;
     background-color: rgb(230, 230, 230);
+}
+
+.sign-out:hover {
+    background-color: rgb(0, 0, 0);
+    color: white !important;
 }

@@ -19,10 +19,6 @@ export default function AppBarComponent() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className='me-auto'></Nav>
             <Nav>
-              <Nav.Link onClick={() => {
-                  navigate("/login");
-              }}>Sign Out
-              </Nav.Link>
               <Nav.Link ><MdOutlineMail size={28} /></Nav.Link>
               <Nav.Link ><MdSettings size={28}/></Nav.Link>
               <Nav.Link ><IoMdNotifications size={28}/></Nav.Link>

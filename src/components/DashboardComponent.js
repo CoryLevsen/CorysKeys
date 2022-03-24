@@ -10,7 +10,6 @@ import Col from 'react-bootstrap/Col';
 
 import AppBarComponent from './AppBarComponent'
 import SideBarComponent from './SideBarComponent'
-// import PanelComponent from './AllProducts'
 
 export default function Dashboard() {
   const [isUser, setIsUser] = useState(false)
@@ -37,7 +36,6 @@ export default function Dashboard() {
                   </Col>
                   <Col xs={10} id="page-content-wrapper">
                     <Outlet/>
-                    {/* <PanelComponent /> */}
                   </Col>
               </Row>
           </Container>

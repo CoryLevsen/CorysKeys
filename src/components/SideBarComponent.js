@@ -12,43 +12,43 @@ export default function SideBarComponent() {
     let navigate = useNavigate();
     return (
     <>
-    <Nav className="col-md-12  d-md-block bg-light sidebar"
+    <Nav className="col-md-12  d-md-block sidebar"
             activeKey="/home">
         <div className="sidebar-sticky"></div>
         <Nav.Item className="sidebar-item-container">
-            <Nav.Link href="/dashboard">HOME</Nav.Link>
+            <Nav.Link href="/dashboard">Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/vendors">VENDORS</Nav.Link>
+            <Nav.Link href="/vendors">Vendors</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/users">USERS</Nav.Link>
+            <Nav.Link href="/users">Users</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/categories">CATEGORIES</Nav.Link>
+            <Nav.Link href="/categories">Categories</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/products">PRODUCTS</Nav.Link>
-            <Nav.Link as={Link} to="/dashboard" className='allProducts' >VIEW ALL PRODUCTS</Nav.Link>
-            <Nav.Link as={Link} to='add' className='allProducts'>ADD NEW PRODUCTS</Nav.Link>
+            <Nav.Link href="/products">Products</Nav.Link>
+            <Nav.Link as={Link} to="/dashboard" className='allProducts' >View All Products</Nav.Link>
+            <Nav.Link as={Link} to='add' className='allProducts'>Add New Products</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/orders">ORDERS</Nav.Link>
+            <Nav.Link href="/orders">Orders</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/reviews">REVIEWS</Nav.Link>
+            <Nav.Link href="/reviews">Reviews</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/brands">BRANDS</Nav.Link>
+            <Nav.Link href="/brands">Brands</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/contact">CONTACT US</Nav.Link>
+            <Nav.Link href="/contact">Contact Us</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link href="/administration">ADMINISTRATION</Nav.Link>
+            <Nav.Link href="/administration">Administration</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-            <Nav.Link onClick={() => {
+            <Nav.Link className='sign-out' onClick={() => {
                 signOut(auth)
                 navigate("/login");
             }}>Sign Out
