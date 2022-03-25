@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductImageDropBox from './ProductImageDropbox'
 
-export default function AddProductsPanel({title}) {
+export default function EditProductsPanel({title}) {
   return (
     <>
       <div className="panel-container">

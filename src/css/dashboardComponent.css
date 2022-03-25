@@ -42,4 +42,6 @@
 
 .words {
     width: 100%;
+    padding-left: 0 !important;
+    font-size: 1.25rem;
 }

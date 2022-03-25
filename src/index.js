@@ -16,6 +16,7 @@ import Error404Component from "./components/Error404Component";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AllProductsPanel from "./components/AllProducts";
 import AddProductsPanel from "./components/AddProducts";
+import EditProductsPanel from "./components/EditProducts";
 
 const rootElement = document.getElementById("root");
 render(
@@ -26,6 +27,7 @@ render(
       <Route path="dashboard" element={<DashboardComponent />} >
         <Route index element={<AllProductsPanel title="All Products"/>} />
         <Route path="add" element={<AddProductsPanel title="Add Products"/>} />
+        <Route path="edit" element={<EditProductsPanel title="Edit Products"/>} />
       </Route>
       <Route path="*" element={<Error404Component />} />
     </Routes>

@@ -8,6 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { MdOutlineMail, MdSettings,  } from 'react-icons/md'
 import { IoMdNotifications } from 'react-icons/io'
 import { CgProfile } from 'react-icons/cg'
+import {HiDotsVertical} from 'react-icons/hi'
 
 export default function AppBarComponent() {
   
@@ -20,9 +21,9 @@ export default function AppBarComponent() {
             <Nav className='me-auto'></Nav>
             <Nav>
               <Nav.Link ><MdOutlineMail size={28} /></Nav.Link>
-              <Nav.Link ><MdSettings size={28}/></Nav.Link>
               <Nav.Link ><IoMdNotifications size={28}/></Nav.Link>
               <Nav.Link ><CgProfile size={28}/></Nav.Link>
+              <Nav.Link ><HiDotsVertical size={28}/></Nav.Link>
             </Nav>
           </Navbar.Collapse>
       </Navbar>
