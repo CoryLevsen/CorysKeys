@@ -14,9 +14,9 @@ import Error404Component from "./components/Error404Component";
 
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AllProductsPanel from "./components/AllProducts";
-import AddProductsPanel from "./components/AddProducts";
-import EditProductsPanel from "./components/EditProducts";
+import AllProductsPanel from "./components/products/AllProducts";
+import AddProductsPanel from "./components/products/AddProducts";
+import EditProductsPanel from "./components/products/EditProducts";
 
 const rootElement = document.getElementById("root");
 render(

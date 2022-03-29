@@ -5,9 +5,7 @@ export default function AllProductsPanel({title}) {
     <>
       <div className="panel-container">
         <h2>{title || "Display Panel"}</h2>
-        <div className='product-panel'>
-
-        </div>
+        <div className='product-panel'></div>
       </div>
     </>
   )

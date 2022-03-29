@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ProductImageDropBox from './ProductImageDropbox'
 
-export default function AddProductsPanel({title}) {
+import PlaceHolderImage from './../../images/warning.jpg'
+
+export default function EditProductsPanel({title}) {
+
+  const [productName, setProductName] = useState('Product Name')
   return (
     <>
       <div className="panel-container">
@@ -11,7 +15,7 @@ export default function AddProductsPanel({title}) {
             <div className='data-entry'>
               <div className="product-image">
                 <label>Product Image</label>
-                {/* <div className='product-dropbox'><ProductImageDropBox/></div> */}
+                <div className='product-dropbox'><ProductImageDropBox /></div>
               </div>
               <div className="product-name">
                 <label>Product Name</label>
@@ -26,8 +30,15 @@ export default function AddProductsPanel({title}) {
                 <textarea rows={6}></textarea>
               </div>
             </div>
-            <div className='product-preview'>
-              <h3>Product Preview Component</h3>
+            <div className='product-preview' productName={productName}>
+              <h2>{productName}</h2>
+              <div className='product-image'>
+                <img src={PlaceHolderImage} alt='berserk keycaps'></img>
+              </div>
+              <p className='product-price'>Price</p>
+              <p className='product-description'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At in tellus integer feugiat. Sodales ut eu sem integer vitae justo eget.
+              </p>
             </div>
           </aside>
         </div>
