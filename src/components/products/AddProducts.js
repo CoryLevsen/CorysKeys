@@ -33,7 +33,7 @@ export default function AddProductsPanel({title}) {
             >
               <div className="product-image">
                 <label>Product Image</label>
-                <div className='product-dropbox'><ProductImageDropBox setProductImage={setProductImage}/></div>
+                <div className='product-dropbox'><ProductImageDropBox className='product-dropbox' setProductImage={setProductImage}/></div>
               </div>
               <div className="product-name">
                 <label>Product Name</label>

@@ -8,7 +8,7 @@ function ProductImageDropBox  ({setProductImage, ...props}){
         setProductImage(URL.createObjectURL(path))
     }, [])
     const {
-        getInputProps,
+        getRootProps, getInputProps,
     } = useDropzone({ accept: 'image/jpeg,image/jpg,image/png', maxFiles:1, onDrop });
 
 function workingThing(){
@@ -17,8 +17,10 @@ function workingThing(){
 
     return( 
         <>
-            <input {...getInputProps()} onChange={workingThing} />
-            <p>Product Image Upload</p>
+            <div {...getRootProps()}>
+                <input {...getInputProps()} onChange={workingThing} />
+                <p>Product Image Upload</p>
+            </div>
         </>
     )
 }
