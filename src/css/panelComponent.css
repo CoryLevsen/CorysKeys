@@ -103,4 +103,5 @@ aside {
 
 .product-description {
     color: #777;
+    word-wrap: break-word;
 }
