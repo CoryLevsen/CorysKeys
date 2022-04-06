@@ -45,6 +45,7 @@ export default function AddProductsPanel({title}) {
   if (isWriting) {
     return (
       <>
+      <div status={loading}>
         {
           !status
           ?
@@ -66,7 +67,7 @@ export default function AddProductsPanel({title}) {
           <div className='product-panel'>
             <aside className='editor-feedback'>
               <figure>
-                <AiOutlineCheckCircle color='d9f99d' size="12rem"/>
+                <AiOutlineCloudUpload color='d9f99d' size="12rem"/>
                 <figcaption>
                   Uploading New Product
                 </figcaption>
@@ -78,6 +79,8 @@ export default function AddProductsPanel({title}) {
             </aside>
           </div>
         }
+      </div>
+        
       </>
     )
   } else {
