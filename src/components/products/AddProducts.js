@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import {AiOutlineCloudUpload, AiOutlineCheckCircle} from "react-icons/ai"
 
@@ -8,15 +9,22 @@ import ProductPreview from './../../assets/images/8k2.jpg'
 import { useNumberFormat } from '../../hooks/useNumberFormat'
 import { useAddNewProduct } from '../../hooks/useAddNewProduct'
 
+const defaults = {
+  description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  name: "Product Name",
+  price: 100.00
+}
+
 export default function AddProductsPanel({title}) {
   const [isWriting, setIsWriting] = useState(false)
-  const [productName, setProductName] = useState('Product Name')
-  const [productPrice, setProductPrice] = useState('199.99')
-  const [productDescription, setProductDescription] = useState('description')
+  const [productName, setProductName] = useState(defaults.name)
+  const [productPrice, setProductPrice] = useState(defaults.price)
+  const [productDescription, setProductDescription] = useState(defaults.description)
   const [productImage, setProductImage] = useState({previewImage:ProductPreview, file:null})
   const [loading, productLoader] = useAddNewProduct()
 
   const formatter = useNumberFormat()
+  const navigate = useNavigate()
 
   function handleSubmit (e) {
     e.preventDefault()
@@ -28,6 +36,11 @@ export default function AddProductsPanel({title}) {
     }
     setIsWriting(true)
     productLoader(productData, productImage.file)
+
+    setProductDescription(defaults.description)
+    setProductImage({previewImage:ProductPreview, file:null})
+    setProductName(defaults.name)
+    setProductPrice(defaults.price)
   }
 
   function handleProductName (name) {
@@ -43,6 +56,7 @@ export default function AddProductsPanel({title}) {
   }
 
   if (isWriting) {
+    
     return (
       <>
         {
@@ -57,8 +71,13 @@ export default function AddProductsPanel({title}) {
                 </figcaption>
               </figure>
               <footer>
-                <button>Add Another Product</button>
-                <button>View All Products</button>
+                <button 
+                onClick={() => setIsWriting(false)}
+                disabled={loading}
+                >Add Another Product</button>
+                <button
+                onClick={() => navigate('/dashboard')}
+                >View All Products</button>
               </footer>
             </aside>
           </div>
@@ -71,13 +90,10 @@ export default function AddProductsPanel({title}) {
                   Uploading New Product
                 </figcaption>
               </figure>
-              <footer>
-                <button>Add Another Product</button>
-                <button>View All Products</button>
-              </footer>
             </aside>
           </div>
         }
+        
       </>
     )
   } else {
