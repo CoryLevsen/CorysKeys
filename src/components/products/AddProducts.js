@@ -45,9 +45,8 @@ export default function AddProductsPanel({title}) {
   if (isWriting) {
     return (
       <>
-      <div status={loading}>
         {
-          !status
+          !loading
           ?
           <div className='product-panel'>
             <aside className='editor-feedback'>
@@ -79,8 +78,6 @@ export default function AddProductsPanel({title}) {
             </aside>
           </div>
         }
-      </div>
-        
       </>
     )
   } else {
